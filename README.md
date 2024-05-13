@@ -2,7 +2,18 @@
 An ETL data pipeline that extracts energy generation data from the TCN (Transmission Company of Nigeria) website and is automated using Apache Airflow with the synchronization of several AWS services such as an EC2 instance, AWS Lambda, and Eventbridge.
 
 ## Data
-[Hourly Generation by GenCos](https://www.niggrid.org/GenerationProfile2)
+[Hourly Generation by GenCos](https://www.niggrid.org/GenerationProfile2)  
+
+## Tools  
+- Amazon EC2: To host and run ETL operations.  
+- AWS Lambda: To manage the start and stop actions of your EC2 instance based on specific triggers.  
+- Amazon EventBridge: To schedule and trigger AWS Lambda functions for starting and stopping ec2 instance at designated times.  
+- Airflow: To orchestrate and manage data collection workflows.  
+- Amazon S3: For storing the collected energy data securely in the cloud.
+- Python: For data processing and modeling.  
+- Pandas: Library used for data manipulation.  
+- Requests: Library used to make HTTP requests to external websites.
+- BeautifulSoup: Library used for parsing HTML documents.  
 
 ## Task
 The goal here is to first extract historic energy generation data from the TCN website since the time they started archiving data. While the site showed they started reporting generation data since 2004, I decided to start my data collection from 2021. This is due to storage reasons and the fact that consistent daily data collection did not begin till 2021.
