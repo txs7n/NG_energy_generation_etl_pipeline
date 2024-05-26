@@ -52,3 +52,14 @@ In this project, the ETL, i.e. Extract, Transform, and Load framework was used. 
 
 In this project, I opted for the more traditional ETL (Extract, Transform, and Load) approach instead of the ELT (Extract, Load, and Transform) method. This decision was influenced by the high memory capacity of the Amazon EC2 server, which could efficiently handle the temporary storage of the data volume from the source URL and the data processing needs. Additionally, using Apache Airflow's XCom feature allows for smooth data transfer between tasks in the workflow, which further supports the ETL approach. The ELT framework can be considered when handling large datasets where extracted data is first dumped in a staging area, followed by transformation within the data warehouse. 
 
+
+## Review After Two Weeks
+After two weeks of this DAG essentially running on autopilot, I decided to update this project with a screenshot showing the status and schedule of the DAG over the days it ran.  
+
+![Screenshot (760)](https://github.com/txs7n/NG_energy_generation_etl_pipeline/assets/118135226/51b3ea36-d35d-4d87-9593-e13fee8ca558)
+
+
+From the screenshot of Airflow DAG, we see that the run history shows a consistent pattern of successful executions. 
+
+
+PS: I made some changes to the schedule time as well. Originally set to run at 06:00 UTC, I changed it to 22:00 UTC due to the high demand for Amazon's compute resources in my region and availability zone during the early hours of the day. 
