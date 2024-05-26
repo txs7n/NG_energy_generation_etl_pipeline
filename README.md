@@ -59,7 +59,7 @@ After two weeks of this DAG essentially running on autopilot, I decided to updat
 ![Screenshot (760)](https://github.com/txs7n/NG_energy_generation_etl_pipeline/assets/118135226/51b3ea36-d35d-4d87-9593-e13fee8ca558)
 
 
-From the screenshot of Airflow DAG, we see that the run history shows a consistent pattern of successful executions. 
+From the screenshot, we see that the run history shows a consistent pattern of successful executions. 
 
 
-PS: I made some changes to the schedule time as well. Originally set to run at 06:00 UTC, I changed it to 22:00 UTC due to the high demand for Amazon's compute resources in my region and availability zone during the early hours of the day. 
+PS: I made some changes to the schedule time as well. Originally set to run at 06:00 UTC, I changed it to 22:00 UTC due to the high demand for AWS's compute resources in my region and availability zone during the early hours of the day. 
